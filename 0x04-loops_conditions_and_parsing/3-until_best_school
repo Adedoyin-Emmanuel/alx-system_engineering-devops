@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A bash script that prints "Best School" to the terminal using until command
 counter=0
-until [$counter -ge 10]
+until [ $counter -ge 10 ]
 do
   echo "Best School"
   ((counter++))
