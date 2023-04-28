@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # A script that uses while loop to print Best School to the terminal.
 
-counter = 0
-while [$counter -lt 10]
+counter=0
+while [ $counter -lt 10 ]
 do
     echo "Best School"
     ((counter++))
+done
