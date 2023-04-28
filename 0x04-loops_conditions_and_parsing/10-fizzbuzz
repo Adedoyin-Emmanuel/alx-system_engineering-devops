@@ -7,15 +7,15 @@
 # In a list format
 for ((i=1; i<100; i++))
 do 
-    if [ $((i % 3)) -eq 0 ] && [ $((i % 5)) -eq 0 ]
+    if ((num % 3 ==0  && num % 5 ==0))
     then 
         echo "FizzBuzz"
     fi
-    if [ $((i % 3)) -eq 0 ]
+    if ((num % 3 == 0))
     then 
         echo "Fizz"
     fi
-    if [ $((i % 5)) -eq 0 ]
+    if ((num % 5 == 0))
     then
         echo "Buzz"
     fi
