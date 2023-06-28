@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get install -y nginx
 
 echo "Hello World!" | sudo tee /var/www/html/index.html
-string="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.adedoyin-emmanuel.netlify.app permanent;"
-sudo sed -i "s/server_name _;/$string/" /etc/nginx/sites-enabled/default
+string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.blog.ehoneahobed.com permanent;"
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
 sudo service nginx restart
