@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Using what you did for task #0, make your fix short and sweet.
-
+# sweeet way to configure nginx to listen on port 80 and not run
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
 pkill -o nginx
