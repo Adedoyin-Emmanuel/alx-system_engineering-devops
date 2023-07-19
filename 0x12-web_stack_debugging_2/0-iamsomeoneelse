@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-# Runs the command, whoami, under a given username
-sudo "$1" -s /bin/bash -c 'whoami'
+# runs the whoami command under the user passed as an argument
+if [ $# -eq 1 ]
+then
+sudo -H -u "$1" bash -c 'whoami'
+fi
