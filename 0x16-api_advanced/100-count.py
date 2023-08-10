@@ -9,7 +9,8 @@ import requests
 
 
 def count_words(subreddit, word_list, instances={}, after="", count=0):
-    """ This prints counts of given words found in hot posts of a given subreddit.
+    """ This prints counts of given words found in hot posts of a
+    given subreddit.
 
     Args:
         subreddit (str): The subreddit to search.
