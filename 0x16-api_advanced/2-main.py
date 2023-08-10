@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 """
-100-main
+2-main
 """
 import sys
 
 if __name__ == '__main__':
-    count_words = __import__('100-count').count_words
-    if len(sys.argv) < 3:
-        print("Usage: {} <subreddit> <list of keywords>".format(sys.argv[0]))
-        print("Ex: {} programming 'python java javascript'".format(sys.argv[0]))
+    recurse = __import__('2-recurse').recurse
+    if len(sys.argv) < 2:
+        print("Please pass an argument for the subreddit to search.")
     else:
-        result = count_words(sys.argv[1], [x for x in sys.argv[2].split()])
+        result = recurse(sys.argv[1])
+        if result is not None:
+            print(len(result))
+        else:
+            print("None")
