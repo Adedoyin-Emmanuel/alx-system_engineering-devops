@@ -3,14 +3,12 @@
 parses the title of all hot articles, and prints a sorted
 count of given keywords (case-insensitive, delimited by spaces.
 Javascript should count as javascript, but java should not).
-
 """
 import requests
 
 
 def count_words(subreddit, word_list, instances={}, after="", count=0):
-    """ This prints counts of given words found in hot posts of a
-    given subreddit.
+    """Prints counts of given words found in hot posts of a given subreddit.
 
     Args:
         subreddit (str): The subreddit to search.
@@ -19,7 +17,7 @@ def count_words(subreddit, word_list, instances={}, after="", count=0):
         after (str): The parameter for the next page of the API results.
         count (int): The parameter of results matched thus far.
     """
-    URL = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
+    url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {
         "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
     }
@@ -28,7 +26,7 @@ def count_words(subreddit, word_list, instances={}, after="", count=0):
         "count": count,
         "limit": 100
     }
-    response = requests.get(URL, headers=headers, params=params,
+    response = requests.get(url, headers=headers, params=params,
                             allow_redirects=False)
     try:
         results = response.json()
